@@ -85,7 +85,8 @@ object TP_MR {
 
   /**
    * 4) Sum of wages:
-   * With the case class Employee defined below, find the sum of salaries from a list of employees. You must not use foldLeft and must use map.
+   * With the case class Employee defined below, find the sum of salaries from a list of employees.
+   * You must not use foldLeft and must use map.
    *
    * Example:
    * scala> salarySum(List(Employee("Jon", 2000), Employee("Jane", 3500)))
@@ -96,9 +97,11 @@ object TP_MR {
 
   //TODO define salarySum which is the sum of the salaries from a list of employees
   //Hint it's a map reduce
-  def salarySum(employees: List[Employee]): Double = ???
-
-
+  def salarySum(employees: List[Employee], acc: int): Double = {
+    return employees
+      .map(e => e._2)
+      .foldLeft(0)(_ + _)
+  }
   /**
    * 5) Address list:
    * With the case class User defined below, list the all their addresses
