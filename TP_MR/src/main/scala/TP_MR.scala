@@ -73,10 +73,15 @@ object TP_MR {
    * res0: List[Int] = List(8, 5, 3, 2, 1, 1)
    */
 
-  def reverseA[T](list: List[T]): List[T] = ???
+  //TODO define reverseA using : foldLeft, ::
+  def reverseA[T](list: List[T]): List[T] = {
+    list.foldLeft(List[T]())((head, tail) => tail :: head)
+  }
 
   //TODO define reverseB using method of the List collection
-  def reverseB[T](list: List[T]): List[T] = ???
+  def reverseB[T](list: List[T]): List[T] = {
+    list.reverse
+  }
 
   /**
    * 4) Sum of wages:
